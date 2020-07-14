@@ -4,12 +4,17 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_wanandroid/common/component_index.dart';
 import 'package:flutter_wanandroid/ui/pages/main_page.dart';
 import 'package:flutter_wanandroid/ui/pages/page_index.dart';
-import 'package:auto_size/auto_size.dart';
 
-void main() => runAutoSizeApp(BlocProvider<ApplicationBloc>(
+import 'common/global.dart';
+
+void main() {
+  Global.init(() {
+    runApp(BlocProvider<ApplicationBloc>(
       bloc: ApplicationBloc(),
       child: BlocProvider(child: MyApp(), bloc: MainBloc()),
     ));
+  });
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -25,9 +30,9 @@ class MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    setInitDir(initStorageDir: true);
     setLocalizedValues(localizedValues);
-    _initAsync();
-    _initListener();
+    init();
   }
 
   void _init() {
@@ -44,10 +49,9 @@ class MyAppState extends State<MyApp> {
     DioUtil().setConfig(config);
   }
 
-  void _initAsync() async {
-    await SpUtil.getInstance();
-    if (!mounted) return;
+  void init() {
     _init();
+    _initListener();
     _loadLocale();
   }
 
@@ -61,7 +65,7 @@ class MyAppState extends State<MyApp> {
   void _loadLocale() {
     setState(() {
       LanguageModel model =
-          SpHelper.getObject<LanguageModel>(Constant.keyLanguage);
+          SpUtil.getObj(Constant.keyLanguage, (v) => LanguageModel.fromJson(v));
       if (model != null) {
         _locale = new Locale(model.languageCode, model.countryCode);
       } else {

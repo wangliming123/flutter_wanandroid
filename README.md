@@ -5,16 +5,9 @@
 有关项目最新动态，可以关注App内第一条Hot Item信息。
 
 ### 运行本项目注意！！！
-本项目运行环境要求!
-```
-ps：作者Futter版本
-[✓] Flutter (Channel beta, v1.6.3, locale zh-Hans-CN)
 
-ps：以上是最低支持版本，如不是，请自行升级！
-  
-flutter channel beta
-flutter upgrade
-```
+Support [√] Flutter (Channel stable, v1.17.0).  
+
 由于在国内访问Flutter有时可能会受到限制，clone项目后，请勿直接packages get，建议运行如下目录行：
 ```
 export PUB_HOSTED_URL=https://pub.flutter-io.cn  
@@ -23,64 +16,15 @@ flutter packages get
 flutter run --release
 ```
 
-### [开源详情！！！](https://github.com/Sky24n/flutter_wanandroid/issues/66)  
-一、Flutter常用工具类库全面升级 [flustars](https://github.com/Sky24n/flustars)
-1. SpUtil 全面支持读取对象，对象列表。无需通过SpHelper二次转换。
-2. ScreenUtil 兼容横/纵屏适配。  
-3. DirectoryUtil 新增文件目录工具类。   
-   
-二、Flutter全局屏幕适配库 [auto_size](https://github.com/flutterchina/auto_size)   
-
-三、基础组件库[base_library](https://github.com/Sky24n/FlutterRepos)，方便多个项目共用。  
-另外附送[login_demo](https://github.com/Sky24n/FlutterRepos/tree/master/login_demo)示例！关于App启动时，未登录跳登录页，已登录进主页。
-
 ### [更新说明](./CHANGELOGS.md)
+v0.2.6 (2020.05.08)  
+Support [√] Flutter (Channel stable, v1.17.0).  
+版本升级功能(仅供参考)
 
-### v0.2.1 (2019.05.08)
-1.新增登录/注册。  
-2.新增收藏功能。  
-3.一些优化~。  
-
-温馨提醒：  
-   ① 默认主题色修改为deepPurpleAccent，与登录/注册页面元素保持一致。  
-   ② 设置新增升级提示次数，可关闭升级提醒，但超过5个版本未升级需要下载最新版。  
-   ③ 快速滚动至顶部按钮展示逻辑优化。  
-  
-
-<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/login.png" width="240">  <img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/register.png" width="240">  <img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/collect.png" width="240">
-
-
-### v0.2.0 (2019.03.29)   
-1.新增分享～。  
-2.新增网络状态页。
-
-<img src="https://gitee.com/uploads/images/2019/0506/004900_cff8f8c0_506864.png" width="240">  <img src="https://gitee.com/uploads/images/2019/0506/004900_d413711d_506864.png" width="240">  <img src="https://gitee.com/uploads/images/2019/0506/004901_f292f8b8_506864.png" width="240">
-
-### v0.1.9 (2019.03.16)   
-1.闪屏页支持视频。  
-2.支持App应用内升级。  
-3.玩安卓Api升级为https。   
-4.Flutter Demos 新增 获取图片尺寸示例。  
-  
-温馨提醒：  
-   ① 为了方便大家体验应用内升级，服务端版本号为：v0.2.0，Apk版本始终为v0.1.9。  
-   ② 由于Apk文件是放在Github上面的，可能下载速度会比较慢。  
-   ③ 为了保护掘金作者原创文章，热门文章修改为从第二页开始获取。  
-  
-<img src="https://gitee.com/uploads/images/2019/0506/004900_5e0bd537_506864.png" width="240">  <img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/splash_video.gif" width="240">  <img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/upgrade_download.gif" width="240">    
-
-### 安卓Apk
-如需体验版本升级功能，可以下载旧版apk。  
-  
-点击下载  [新版v0.2.1](https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppStore/flutter_wanandroid.apk)  ---  [旧版v0.2.0](https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppStore/flutter_wanandroid_old.apk)  
-   
-扫码下载 新版v0.2.1  
-![flutter_wanandroid](https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/qrcode.png)
-  
-扫码下载 旧版v0.2.0    
-![flutter_wanandroid](https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/qrcode1.png)
-
-### iOS：请自行clone项目代码运行。
+### [FlutterRepos](https://github.com/Sky24n/FlutterRepos)
+1. [base_library](https://github.com/Sky24n/FlutterRepos/tree/master/base_library) Flutter基础组件库，方便多个项目共用。
+2. [login_demo](https://github.com/Sky24n/FlutterRepos/tree/master/login_demo) 关于App启动时，未登录跳登录页，已登录进主页。
+3. [flutter_gallery](https://github.com/Sky24n/FlutterRepos/tree/master/flutter_gallery) 也许是Google官方最后一个版本的gallery(旧版)。
 
 ## App目录结构
 >- |--lib
@@ -124,7 +68,7 @@ class WanAndroidApi {
   }
 }
 ```
-### 网络请求工具类 单例[DioUtil](https://github.com/Sky24n/flutter_wanandroid/blob/master/lib/data/net/dio_util.dart)(基于v1.0.13，仅供参考～)
+### 网络请求工具类 DioUtil
 ```dart
 // 打开debug模式.
 DioUtil.openDebug();   
@@ -392,121 +336,84 @@ double adapterSize = ScreenUtil.getAdapterSizeCtx(context, 100)
 >    - |-- widget_page.dart 获取Widget尺寸/屏幕坐标示例
 
 
-## Screenshot
-### 主界面
-<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/home.gif" width="240">  
+## Screenshots
 
-### 启动页
-<img src="https://gitee.com/uploads/images/2019/0506/005059_fa3a5968_506864.gif" width="240"> 
+截图无法查看？
 
-### 侧滑Back
-<img src="https://gitee.com/uploads/images/2019/0506/004903_44c9266f_506864.gif" width="240"> 
+[掘金地址](https://juejin.im/post/5c380b336fb9a049fd100eff)  
+[简书地址](https://www.jianshu.com/p/be0107298bc5)
 
-### 快速滚动到顶部
-<img src="https://gitee.com/uploads/images/2019/0506/004903_0837c169_506864.gif" width="240"> 
+|主界面|启动页|侧滑Back|
+|:---:|:---:|:---:|
+|<img src="https://gitee.com/uploads/images/2019/0506/004903_0837c169_506864.gif" width="240" />|<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/splash.gif" width="240"/>|<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/slide_back.gif" width="240"/>|
+|快速滚动到顶部|分类页面|国际化|
+|<img src="https://gitee.com/uploads/images/2019/0506/004903_0837c169_506864.gif" width="240"/>|<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/tree.gif" width="240"/>|<img src="https://gitee.com/uploads/images/2019/0506/004906_f1f1147e_506864.gif" width="240"/>|
+|主题色|闪屏广告页|引导页|
+|<img src="https://gitee.com/uploads/images/2019/0506/004907_498b0fb8_506864.gif" width="240"/>|<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/2018-11-23_13_05_08.gif" width="240"/>|<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/2018-11-19_12_35_32.gif" width="240"/>|
 
-### 分类页面
-<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/tree.gif" width="240"> 
-
-### 国际化 
-<img src="https://gitee.com/uploads/images/2019/0506/004906_f1f1147e_506864.gif" width="240">  
-
-### 主题色 
-<img src="https://gitee.com/uploads/images/2019/0506/004907_498b0fb8_506864.gif" width="240">  
-
-### 闪屏广告页 
-<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/2018-11-23_13_05_08.gif" width="240">  
- 
-### 引导页 
-<img src="https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/2018-11-19_12_35_32.gif" width="240">  
-
-### Big Thanks
+### Thanks
 ① 感谢鸿洋大佬提供的[开源api](http://www.wanandroid.com/blog/show/2)  
 ② 界面参考[gitme](https://flutterchina.club/app/gm.html)  
 ③ [Github Trending Api](https://github.com/huchenme/github-trending-api)   
 ④ [Streams-Block-Reactive-Programming-in-Flutter](https://github.com/boeledi/Streams-Block-Reactive-Programming-in-Flutter) 
 
-### 开源库
-1. Dart常用工具类库[common_utils][common_utils_github]（作者）  
-   该库包含TimerUtil（倒计时，定时任务），TimelineUtil（时间轴），DateUtil（日期格式化），RegexUtil（正则验证手机号，身份证，邮箱等等），RegexUtil（正则验证手机号，身份证，邮箱等等），NumUtil（保留x位小数, 精确加、减、乘、除, 防止精度丢失），MoneyUtil（元转分，分转元），ObjectUtil（判空），LogUtil（简单封装打印日志）。  
-   如果你有不错的纯dart工具类或对已有对工具类有更好的优化建议，欢迎PR，大家一起维护～  
-2. Flutter常用工具类库[flustars][flustars_github]（作者）  
-   该库包含SpUtil（单例"同步" SharedPreferences 工具类），ScreenUtil（屏幕适配），WidgetUtil（Widget渲染监听，获取Widget宽高，在屏幕上的坐标）。  
-   如果你有不错的Flutter工具类或对已有对工具类有更好的优化建议，欢迎PR，大家一起维护～   
-3. 汉字转拼音库[lpinyin](https://github.com/flutterchina/lpinyin)（作者）  
-4. 国际化/多语言库[fluintl](https://github.com/Sky24n/fluintl)（作者）  
-5. UI组件库[flukit](https://github.com/flutterchina/flukit)  
-6. 网络请求[dio](https://github.com/flutterchina/dio)  
-7. 图片加载[cached_network_image](https://github.com/renefloor/flutter_cached_network_image)  
-8. 上拉加载和下拉刷新[pull_to_refresh](https://github.com/peng8350/flutter_pulltorefresh)  
-9. [url_launcher](https://github.com/flutter/plugins/tree/master/packages/url_launcher)  
-10. 点赞效果[LikeButton](https://github.com/yumi0629/LikeButton)  
-11. 安卓webview增加滚动监听[webview_flutter](https://github.com/Sky24n/plugins/tree/master/packages/webview_flutter)  
-12. 城市列表[azlistview](https://github.com/flutterchina/azlistview)（作者）  
-
 ### 项目问题汇总
 Q1：Flutter国际化系统切换iOS不生效问题？  
 A1：在Xcode项目Localizations下添加支持语言即可，[原文](https://stanzhai.site/blog/post/stanzhai/Flutter国际化设置在iOS设备上不生效的问题)。
+
+### App
+Apk：[flutter_wanandroid.apk](https://github.com/Sky24n/Doc)  
+iOS：请自行clone项目代码运行。
 
 ### 关于作者
 GitHub : [Sky24n](https://github.com/Sky24n)  
 简书 &nbsp;&nbsp;&nbsp;&nbsp;: [Sky24n](https://www.jianshu.com/u/cbf2ad25d33a)  
 掘金 &nbsp;&nbsp;&nbsp;&nbsp;: [Sky24n](https://juejin.im/user/5b9e8a92e51d453df0440422/posts)  
-Pub &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: [Sky24n](https://pub.flutter-io.cn/packages?q=email%3A863764940%40qq.com)    
 Email &nbsp;&nbsp;: 863764940@qq.com  
 ⭐⭐⭐ 如果您觉得本项目不错的话，来个star支持下作者吧! ⭐⭐⭐  
 关于项目任何问题请提交[issues](https://github.com/Sky24n/flutter_wanandroid/issues)，私发QQ邮件将不再回复～
 
-Flutter全局屏幕适配 [auto_size](https://github.com/flutterchina/auto_size)  
-  
-[![GitHub stars](https://img.shields.io/github/stars/flutterchina/auto_size.svg?style=social&label=Star)](https://github.com/flutterchina/auto_size) [![GitHub forks](https://img.shields.io/github/forks/flutterchina/auto_size.svg?style=social&label=Fork)](https://github.com/flutterchina/auto_size) [![GitHub watchers](https://img.shields.io/github/watchers/flutterchina/auto_size.svg?style=social&label=Watch)](https://github.com/flutterchina/auto_size)  
+⭐⭐⭐ 最新开源 ⭐⭐⭐  
+[nine_grid_view](https://juejin.im/post/5ee825ab5188251f3f07af75)  
+Flutter仿微信/微博九宫格、拖拽排序，钉钉群组，微信群组头像。
 
-Flutter版玩安卓 [flutter_wanandroid](https://github.com/Sky24n/flutter_wanandroid)  
-  
-[![GitHub stars](https://img.shields.io/github/stars/Sky24n/flutter_wanandroid.svg?style=social&label=Star)](https://github.com/Sky24n/flutter_wanandroid) [![GitHub forks](https://img.shields.io/github/forks/Sky24n/flutter_wanandroid.svg?style=social&label=Fork)](https://github.com/Sky24n/flutter_wanandroid) [![GitHub watchers](https://img.shields.io/github/watchers/Sky24n/flutter_wanandroid.svg?style=social&label=Watch)](https://github.com/Sky24n/flutter_wanandroid)  
-  
-Flutter仿滴滴出行 [GreenTravel](https://github.com/Sky24n/GreenTravel)  
-  
-[![GitHub stars](https://img.shields.io/github/stars/Sky24n/GreenTravel.svg?style=social&label=Star)](https://github.com/Sky24n/GreenTravel) [![GitHub forks](https://img.shields.io/github/forks/Sky24n/GreenTravel.svg?style=social&label=Fork)](https://github.com/Sky24n/GreenTravel) [![GitHub watchers](https://img.shields.io/github/watchers/Sky24n/GreenTravel.svg?style=social&label=Watch)](https://github.com/Sky24n/GreenTravel)  
-  
-Flutter常用工具类库 [flustars](https://github.com/Sky24n/flustars)  
-  
-[![GitHub stars](https://img.shields.io/github/stars/Sky24n/flustars.svg?style=social&label=Star)](https://github.com/Sky24n/flustars) [![GitHub forks](https://img.shields.io/github/forks/Sky24n/flustars.svg?style=social&label=Fork)](https://github.com/Sky24n/flustars) [![GitHub watchers](https://img.shields.io/github/watchers/Sky24n/flustars.svg?style=social&label=Watch)](https://github.com/Sky24n/flustars)  
-  
-Dart常用工具类库 [common_utils](https://github.com/Sky24n/common_utils)  
-  
-[![GitHub stars](https://img.shields.io/github/stars/Sky24n/common_utils.svg?style=social&label=Star)](https://github.com/Sky24n/common_utils) [![GitHub forks](https://img.shields.io/github/forks/Sky24n/common_utils.svg?style=social&label=Fork)](https://github.com/Sky24n/common_utils) [![GitHub watchers](https://img.shields.io/github/watchers/Sky24n/common_utils.svg?style=social&label=Watch)](https://github.com/Sky24n/common_utils)  
-  
-Flutter城市列表 [azlistview](https://github.com/flutterchina/azlistview)  
-  
-[![GitHub stars](https://img.shields.io/github/stars/flutterchina/azlistview.svg?style=social&label=Star)](https://github.com/flutterchina/azlistview) [![GitHub forks](https://img.shields.io/github/forks/flutterchina/azlistview.svg?style=social&label=Fork)](https://github.com/flutterchina/azlistview) [![GitHub watchers](https://img.shields.io/github/watchers/flutterchina/azlistview.svg?style=social&label=Watch)](https://github.com/flutterchina/azlistview)  
-  
-Flutter汉字转拼音库 [lpinyin](https://github.com/flutterchina/lpinyin)  
-  
-[![GitHub stars](https://img.shields.io/github/stars/flutterchina/lpinyin.svg?style=social&label=Star)](https://github.com/flutterchina/lpinyin) [![GitHub forks](https://img.shields.io/github/forks/flutterchina/lpinyin.svg?style=social&label=Fork)](https://github.com/flutterchina/lpinyin) [![GitHub watchers](https://img.shields.io/github/watchers/flutterchina/lpinyin.svg?style=social&label=Watch)](https://github.com/flutterchina/lpinyin)  
-  
-Flutter国际化库 [fluintl](https://github.com/Sky24n/fluintl)  
-  
-[![GitHub stars](https://img.shields.io/github/stars/Sky24n/fluintl.svg?style=social&label=Star)](https://github.com/Sky24n/fluintl) [![GitHub forks](https://img.shields.io/github/forks/Sky24n/fluintl.svg?style=social&label=Fork)](https://github.com/Sky24n/fluintl) [![GitHub watchers](https://img.shields.io/github/watchers/Sky24n/fluintl.svg?style=social&label=Watch)](https://github.com/Sky24n/fluintl)  
+⭐⭐⭐ 个人作品 ⭐⭐⭐  
+[Fitness](https://juejin.im/post/5ebd74b5f265da7bbd2f9aa6)  
+Flutter开发的微博客户端，同时支持Android和iOS。与官方微博x9.99%相似度体验，离线模式，多语言支持，主题随心换，超乎想象的流畅度，各种惊喜的细节等待你一一发现。
 
 
+Flutter仿微博客户端  [Flutter Weibo](https://github.com/Sky24n/Fitness)
 
+[![GitHub stars](https://img.shields.io/github/stars/Sky24n/Fitness.svg?style=social&label=Star)](https://github.com/Sky24n/Fitness)
 
-[flutter_wanandroid_github]: https://github.com/Sky24n/flutter_wanandroid
-[flutter_wanandroid_apk]: https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppStore/flutter_wanandroid.apk
-[flutter_wanandroid_qr]: https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_wanandroid/qrcode.png
+Flutter仿微信/微博九宫格 [NineGridView](https://github.com/flutterchina/nine_grid_view)
 
-[flutter_demos_github]: https://github.com/Sky24n/flutter_demos
-[flutter_demos_apk]: https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppStore/flutter_demos.apk
-[flutter_demos_qr]: https://raw.githubusercontent.com/Sky24n/LDocuments/master/AppImgs/flutter_demos/qrcode.png
+[![GitHub stars](https://img.shields.io/github/stars/flutterchina/nine_grid_view.svg?style=social&label=Star)](https://github.com/flutterchina/nine_grid_view)
 
-[common_utils_github]: https://github.com/Sky24n/common_utils
+Flutter版玩安卓 [flutter_wanandroid](https://github.com/Sky24n/flutter_wanandroid)
 
-[flustars_github]: https://github.com/Sky24n/flustars
+[![GitHub stars](https://img.shields.io/github/stars/Sky24n/flutter_wanandroid.svg?style=social&label=Star)](https://github.com/Sky24n/flutter_wanandroid)
 
-[jianshuSvg]: https://img.shields.io/badge/简书-@Sky24n-536dfe.svg
-[jianshu]: https://www.jianshu.com/u/cbf2ad25d33a
+Flutter仿滴滴出行 [GreenTravel](https://github.com/Sky24n/GreenTravel)
 
-[juejinSvg]: https://img.shields.io/badge/掘金-@Sky24n-536dfe.svg
-[juejin]: https://juejin.im/user/5b9e8a92e51d453df0440422
-  
+[![GitHub stars](https://img.shields.io/github/stars/Sky24n/GreenTravel.svg?style=social&label=Star)](https://github.com/Sky24n/GreenTravel)
+
+Flutter常用工具类库 [flustars](https://github.com/Sky24n/flustars)
+
+[![GitHub stars](https://img.shields.io/github/stars/Sky24n/flustars.svg?style=social&label=Star)](https://github.com/Sky24n/flustars)
+
+Dart常用工具类库 [common_utils](https://github.com/Sky24n/common_utils)
+
+[![GitHub stars](https://img.shields.io/github/stars/Sky24n/common_utils.svg?style=social&label=Star)](https://github.com/Sky24n/common_utils)
+
+Flutter城市列表 [azlistview](https://github.com/flutterchina/azlistview)
+
+[![GitHub stars](https://img.shields.io/github/stars/flutterchina/azlistview.svg?style=social&label=Star)](https://github.com/flutterchina/azlistview)
+
+Flutter汉字转拼音库 [lpinyin](https://github.com/flutterchina/lpinyin)
+
+[![GitHub stars](https://img.shields.io/github/stars/flutterchina/lpinyin.svg?style=social&label=Star)](https://github.com/flutterchina/lpinyin)
+
+Flutter国际化库 [fluintl](https://github.com/Sky24n/fluintl)
+
+[![GitHub stars](https://img.shields.io/github/stars/Sky24n/fluintl.svg?style=social&label=Star)](https://github.com/Sky24n/fluintl)
